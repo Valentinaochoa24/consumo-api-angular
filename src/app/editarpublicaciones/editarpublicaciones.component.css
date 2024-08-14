@@ -1,0 +1,12 @@
+.text-purple {
+    color: #6f42c1; /* Color morado */
+}
+
+.btn-purple {
+    background-color: #6f42c1; /* Color de fondo morado */
+    color: white; /* Color del texto */
+}
+
+.btn-purple:hover {
+    background-color: #5a32a1; /* Color de fondo morado más oscuro al pasar el mouse */
+}

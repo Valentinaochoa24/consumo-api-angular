@@ -1,0 +1,21 @@
+<h1 class="text-center text-purple">Crear Nueva Publicación</h1>
+
+<div *ngIf="successMessage" class="alert alert-success" role="alert" style="margin-top: 20px;">
+    {{ successMessage }}
+</div>
+
+<form (ngSubmit)="onSubmit()" #postForm="ngForm" class="container mt-4">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" id="title" required [(ngModel)]="crear.title" name="title" class="form-control" placeholder="Ingrese el título">
+  </div>
+  <div class="mb-3">
+    <label for="body" class="form-label">Body</label>
+    <input type="text" id="body" required [(ngModel)]="crear.body" name="body" class="form-control" placeholder="Ingrese el contenido">
+  </div>
+  <div class="mb-3">
+    <label for="userId" class="form-label">User ID</label>
+    <input type="number" id="userId" required [(ngModel)]="crear.userId" name="userId" class="form-control" placeholder="Ingrese el ID del usuario">
+  </div>
+  <button type="submit" class="btn btn-purple">Crear Post</button>
+</form>
