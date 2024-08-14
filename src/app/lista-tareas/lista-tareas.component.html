@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Lista de tareas:</h2>
+    <div class="row">
+        <div *ngFor="let tarea of listaTareas; let i = index" class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    Tarea {{i + 1}}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span><b>Id de tarea:</b> {{ tarea.id }}</span></li>
+                    <li class="list-group-item"><span><b>Usuario Asociado:</b>{{ tarea.userId }}</span></li>
+                    <li class="list-group-item"><span><b>Descripción de tarea:</b> {{ tarea.title }}</span></li>
+                    <li class="list-group-item">
+                        <span *ngIf="tarea.completed" class="text-success">Completada</span>
+                        <span *ngIf="!tarea.completed" class="text-danger">No Completada</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+  

@@ -1,0 +1,20 @@
+<p>publicaciones works!</p>
+
+
+<div class="container">
+    <h2>Lista de Publicaciones:</h2>
+    <div class="row">
+        <div *ngFor="let user of listaUsers; let i = index" class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    Publicacion {{user.title}}
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span><b>Id:</b> {{ user.id }}</span></li>
+                    <li class="list-group-item"><span><b>Descripción de publicacion:</b> {{ user.body }}</span></li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
